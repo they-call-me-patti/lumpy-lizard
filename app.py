@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, request, render_template_string
 import os
 
 app = Flask(__name__)
-PAYLOAD_DIR = "/home/kali/Documents/c2"
+PAYLOAD_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Store download logs in memory for the UI
 download_logs = []
@@ -132,7 +132,7 @@ def index():
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label class="form-label text-success">Output Directory</label>
-                                    <input type="text" class="form-control" value="/home/kali/Documents/c2/payloads" disabled>
+                                    <input type="text" class="form-control" value="./payloads" disabled>
                                 </div>
                                 <div class="mb-3">
                                     <label for="c2IpInput" class="form-label">C2 Server IP</label>
